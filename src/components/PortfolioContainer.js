@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavTabs from './NavTabs';
+import Navbar from './Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
@@ -8,7 +8,6 @@ import Contact from './pages/Contact';
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
 
-  // TODO: Add a comment describing the functionality of this method
   // renders the page depending on what "currentPage" is
   const renderPage = () => {
     if (currentPage === 'Home') {
@@ -27,10 +26,8 @@ export default function PortfolioContainer() {
 
   return (
     <div>
-      {/* // TODO: Add a comment describing what we are passing as props */}
-      {/* passing what is current page and the handlepagechange function */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line */}
+
+      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
     </div>
   );
