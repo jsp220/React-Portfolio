@@ -12,7 +12,7 @@ export default function Home({ currentPage, handlePageChange }) {
 					href="#about"
 					onClick={() => handlePageChange('About')}
 				>
-					<img src={imgOne} alt="about-me" />
+					<img className="home-btn" src={imgOne} alt="about-me" />
 					<div className="overlay p-2">
 						<h2>About Me</h2>
 					</div>
@@ -23,7 +23,7 @@ export default function Home({ currentPage, handlePageChange }) {
 					href="#portfolio"
 					onClick={() => handlePageChange('Portfolio')}
 				>
-					<img src={imgTwo} alt="portfolio" />
+					<img className="home-btn" src={imgTwo} alt="portfolio" />
 					<div className="overlay p-2">
 						<h2>Portfolio</h2>
 					</div>
@@ -34,7 +34,7 @@ export default function Home({ currentPage, handlePageChange }) {
 					href="#contact"
 					onClick={() => handlePageChange('Contact')}
 				>
-					<img src={imgThree} alt="contact-me" />
+					<img className="home-btn" src={imgThree} alt="contact-me" />
 					<div className="overlay p-2">
 						<h2>Contact Me</h2>
 					</div>
@@ -45,7 +45,7 @@ export default function Home({ currentPage, handlePageChange }) {
 					href="#resume"
 					onClick={() => handlePageChange('Resume')}
 				>
-					<img src={imgFour} alt="resume" />
+					<img className="home-btn" src={imgFour} alt="resume" />
 					<div className="overlay p-2">
 						<h2>Resume</h2>
 					</div>

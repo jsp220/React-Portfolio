@@ -19,8 +19,8 @@ function Footer() {
     return (
         <footer>
             <div className="container-fluid footer d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
-                <p className="col-4 mb-0 text-muted">©2022 Joon Park</p>
-                <ul className="col-8 nav justify-content-end">
+                <p className="col-3 mb-0 text-muted">©2022 Joon Park</p>
+                <ul className="col-9 nav justify-content-end">
                     {links.map((item) => {
                         return <a className="nav-link black" href={item.link} key={item.name} target="_blank">{item.name}</a>
                     })}
