@@ -1,17 +1,12 @@
 import React from 'react';
 
 export default function AboutMe() {
-  return (
-    <div>
-      <h1>About Me</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
-    </div>
-  );
+	return (
+		<div className="pt-1">
+			<h1 className="pb-1">About Me</h1>
+			<p>
+				Joon Park is a professional full stack developer based in San Diego, CA. He completed his certificate for full stack web development at UC San Diego Extended Studies in November 2022. Joon has developed various frontend, backend, and full stack applications, some of which can be found on the Portfolio page.
+			</p>
+		</div>
+	);
 }

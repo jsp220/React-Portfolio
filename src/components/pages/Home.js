@@ -1,21 +1,47 @@
 import React from 'react';
+import imgOne from '../../assets/images/bg-1.jpeg'
+import imgTwo from '../../assets/images/bg-2.jpeg'
+import imgThree from '../../assets/images/bg-3.jpeg'
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Home Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
-  );
+export default function Home({ currentPage, handlePageChange }) {
+	return (
+		<div className="row justify-content-around">
+			<div className="tile about-me mt-2 p-0">
+				<a
+					href="#about"
+					onClick={() => handlePageChange('About')}
+				>
+					<img src={imgOne} alt="about-me" />
+					<div className="overlay p-2">
+						<h2>About Me</h2>
+					</div>
+				</a>
+			</div>
+			<div className="tile portfolio mt-2 p-0">
+				<a 
+					href="#portfolio"
+					onClick={() => handlePageChange('Portfolio')}
+				>
+					<img src={imgTwo} alt="portfolio" />
+					<div className="overlay p-2">
+						<h2>Portfolio</h2>
+					</div>
+				</a>
+			</div>
+			<div className="tile contact-me mt-2 p-0">
+				<a 
+					href="#contact"
+					onClick={() => handlePageChange('Contact')}
+				>
+					<img src={imgThree} alt="contact-me" />
+					<div className="overlay p-2">
+						<h2>Contact Me</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	);
 }
+
+
+
