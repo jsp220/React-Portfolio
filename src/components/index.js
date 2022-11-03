@@ -8,6 +8,7 @@ import Resume from './pages/Resume';
 import Footer from './Footer';
 
 const MainPage = () => {
+	// set initial state of currentPage as Home
 	const [currentPage, setCurrentPage] = useState('Home');
 
 	// renders the page depending on what "currentPage" is
@@ -27,10 +28,12 @@ const MainPage = () => {
 		return <Home currentPage={currentPage} handlePageChange={handlePageChange} />;
 	};
 
+	// when page is changed, state of currentPage is also changed
 	const handlePageChange = (page) => setCurrentPage(page);
 
 	return (
 		<>
+			{/* currentPage and handlePageChange are passed into Header as props */}
 			<Header currentPage={currentPage} handlePageChange={handlePageChange} />
 			<main>
 				<section className="container-fluid main-section">

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 export default function Contact() {
+	// use state for all 3 fields in the form
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 	
+	// update state every time there is a change in any of the fields
 	const handleInputChange = (e) => {
 		// Getting the value and name of the input which triggered the change
 		const { name, value } = e.target;
@@ -14,6 +16,7 @@ export default function Contact() {
 		if (name == "message") return setMessage(value);
 	};
 
+	// show alerts when fields are left blank or email is not valid, and the user clicks away from the field
 	const handleBlur = (e) => {
 		const { name, value } = e.target;
 		if (name == "email") {
@@ -28,6 +31,7 @@ export default function Contact() {
 		}
 	}
 
+	// when the form is submitted, check for empty fields and invalid email address
 	const handleFormSubmit = (event) => {
 		event.preventDefault();
 		if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
@@ -39,6 +43,7 @@ export default function Contact() {
 			return;
 		}
 		alert("Thank you for your message!");
+		// set all fields back to blank
 		setName('');
 		setEmail('');
 		setMessage('');

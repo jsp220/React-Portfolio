@@ -6,6 +6,7 @@ import imgFour from '../../assets/images/bg-4.jpeg'
 
 export default function Home({ currentPage, handlePageChange }) {
 	return (
+		// each tile is also a link to different pages, and on click the handlePageChange function is executed, updating the state of currentPage
 		<div className="row justify-content-around">
 			<div className="tile about-me mt-2 p-0">
 				<a

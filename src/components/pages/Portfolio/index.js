@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './Project';
+// import all images
 import projOne from '../../../assets/images/proj1.png';
 import projTwo from '../../../assets/images/proj2.png';
 import projThree from '../../../assets/images/proj3.png';
@@ -9,6 +10,7 @@ import projSix from '../../../assets/images/proj6.png';
 
 
 const Portfolio = () => {
+	// organize all projects as an array of objects so that they can be mapped through
 	const projects = [
 		{
 			name: "Corgis Messenger",
