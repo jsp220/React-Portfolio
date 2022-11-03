@@ -34,7 +34,15 @@ export default function Contact() {
 			alert("Please enter a valid email address.");
 			return;
 		}
+		if (!name || !email || !message) {
+			alert("Please enter all required fields.");
+			return;
+		}
 		alert("Thank you for your message!");
+		setName('');
+		setEmail('');
+		setMessage('');
+		return;
 	}
 	
 	return (
