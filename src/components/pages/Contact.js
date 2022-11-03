@@ -1,26 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
-  return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
-  );
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+	
+	const handleInputChange = (e) => {
+		// Getting the value and name of the input which triggered the change
+		const { name, value } = e.target;
+		
+		if (name == "name") return setName(value);
+		if (name == "email") return setEmail(value);
+		if (name == "message") return setMessage(value);
+	};
+
+	const handleBlur = (e) => {
+		const { name, value } = e.target;
+		if (name == "email") {
+			if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+				alert("Please enter a valid email address.");
+				return;
+			}
+		}
+		if (!value) {
+			alert(`${name} is a required field.`);
+			return;
+		}
+	}
+
+	const handleFormSubmit = (event) => {
+		event.preventDefault();
+		if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+			alert("Please enter a valid email address.");
+			return;
+		}
+		alert("Thank you for your message!");
+	}
+	
+	return (
+		<div className="pt-1">
+			<h1 className="pb-1">Contact Me</h1>
+			<form id="contact-form">
+				<div className="mb-3">
+					<label for="contact-name" className="form-label">Name</label>
+					<input 
+						value={name}
+						name="name"
+						onChange={handleInputChange}
+						onBlur={handleBlur}
+						type="email" 
+						className="form-control" 
+						id="contact-name" 
+						placeholder="Your Name" />
+				</div>
+				<div className="mb-3">
+					<label for="contact-email" className="form-label">Email address</label>
+					<input 
+						value={email}
+						name="email"
+						onChange={handleInputChange}
+						onBlur={handleBlur}
+						type="email" 
+						className="form-control" 
+						id="contact-email" 
+						placeholder="name@example.com" />
+				</div>
+				<div className="mb-3">
+					<label for="contact-message" className="form-label">Message:</label>
+					<textarea 
+						value={message}
+						name="message"
+						onChange={handleInputChange}
+						onBlur={handleBlur}
+						className="form-control" 
+						id="contact-message" 
+						rows="3"
+					></textarea>
+				</div>
+				<div className="col-auto">
+					<button type="submit" onClick={(event) => handleFormSubmit(event)} className="btn btn-primary mb-3">Submit</button>
+				</div>
+			</form>
+		</div>
+	);
 }
-
-
-
-// /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
