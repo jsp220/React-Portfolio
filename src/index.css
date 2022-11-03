@@ -91,7 +91,7 @@ h3 {
 
 .contact-me .overlay,
 .resume .overlay {
-    top: 300px;
+    top: 175px;
 }
 
 
@@ -120,4 +120,9 @@ h3 {
 .proj-title {
     color: black;
     padding-bottom: 0
+}
+.me-photo {
+    width: 250px;
+    height: 250px;
+
 }
