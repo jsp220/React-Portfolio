@@ -94,7 +94,6 @@ h3 {
     top: 175px;
 }
 
-
 .tile:hover img {
     -webkit-filter: blur(4px);
     filter: blur(4px);
@@ -104,7 +103,10 @@ h3 {
     color: black;
 }
 
-.portfolio {
+.me-photo {
+    width: 250px;
+    height: 250px;
+
 }
 
 .proj {
@@ -121,8 +123,13 @@ h3 {
     color: black;
     padding-bottom: 0
 }
-.me-photo {
-    width: 250px;
-    height: 250px;
 
+.resume {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.resume-link {
+    padding-bottom: 50px;
 }
