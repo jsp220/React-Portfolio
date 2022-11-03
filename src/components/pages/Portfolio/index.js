@@ -15,7 +15,7 @@ const Portfolio = () => {
 		{
 			name: "Corgis Messenger",
 			link: "https://corgi-messenger.herokuapp.com/",
-			repo: "https://github.com/ricky8221/chat-project",
+			repo: "https://github.com/jsp220/Chat-App",
 			img: projOne
 		},
 		{
