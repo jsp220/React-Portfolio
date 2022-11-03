@@ -13,7 +13,7 @@ function Header( { currentPage, handlePageChange }) {
 					>
 						Joon Park
 					</a>
-					<Navigation {...currentPage} {...handlePageChange} />
+					<Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
 				</div>
 			</nav>
 			<h1 className="headline">Full Stack Web Developer</h1>

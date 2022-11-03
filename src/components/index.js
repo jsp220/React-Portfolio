@@ -31,7 +31,7 @@ const MainPage = () => {
 
 	return (
 		<>
-			<Header {...currentPage} {...handlePageChange} />
+			<Header currentPage={currentPage} handlePageChange={handlePageChange} />
 			<main>
 				<section className="container-fluid main-section">
 				{renderPage()}

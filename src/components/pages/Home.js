@@ -2,6 +2,7 @@ import React from 'react';
 import imgOne from '../../assets/images/bg-1.jpeg'
 import imgTwo from '../../assets/images/bg-2.jpeg'
 import imgThree from '../../assets/images/bg-3.jpeg'
+import imgFour from '../../assets/images/bg-4.jpeg'
 
 export default function Home({ currentPage, handlePageChange }) {
 	return (
@@ -36,6 +37,17 @@ export default function Home({ currentPage, handlePageChange }) {
 					<img src={imgThree} alt="contact-me" />
 					<div className="overlay p-2">
 						<h2>Contact Me</h2>
+					</div>
+				</a>
+			</div>
+			<div className="tile resume mt-2 p-0">
+				<a 
+					href="#resume"
+					onClick={() => handlePageChange('Resume')}
+				>
+					<img src={imgFour} alt="resume" />
+					<div className="overlay p-2">
+						<h2>Resume</h2>
 					</div>
 				</a>
 			</div>

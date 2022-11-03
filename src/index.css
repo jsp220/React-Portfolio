@@ -48,6 +48,7 @@ footer {
 
 .main-section {
     background-color: white;
+    margin-bottom: 75px;
 }
 
 .tile {
@@ -76,17 +77,19 @@ footer {
     text-shadow: 1px 1px 2px black;
 }
 
-.about-me .overlay {
+.about-me .overlay, 
+.contact-me .overlay {
     text-align: start;
 }
 
-.portfolio .overlay {
+.portfolio .overlay,
+.resume .overlay {
     text-align: end;
 }
 
-.contact-me .overlay {
+.contact-me .overlay,
+.resume .overlay {
     top: 300px;
-    text-align: center;
 }
 
 
