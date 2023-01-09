@@ -13,21 +13,21 @@ const Portfolio = () => {
 	// organize all projects as an array of objects so that they can be mapped through
 	const projects = [
 		{
-			name: "Corgis Messenger",
-			link: "https://corgi-messenger.herokuapp.com/",
-			repo: "https://github.com/jsp220/Chat-App",
+			name: "Cats vs. Dogs",
+			link: "https://young-bayou-37103.herokuapp.com/",
+			repo: "https://github.com/jsp220/Cats-vs-Dogs",
 			img: projOne
+		},
+		{
+			name: "Corgis Messenger",
+			link: "https://radiant-peak-12110.herokuapp.com/",
+			repo: "https://github.com/jsp220/Chat-App",
+			img: projTwo
 		},
 		{
 			name: "Fullstech Blog",
 			link: "https://fullstech-blog.herokuapp.com/",
 			repo: "https://github.com/jsp220/Fullstech-Blog",
-			img: projTwo
-		},
-		{
-			name: "Work Day Scheduler",
-			link: "https://jsp220.github.io/Work-Day-Scheduler/",
-			repo: "https://github.com/jsp220/Work-Day-Scheduler",
 			img: projThree
 		},
 		{
@@ -37,13 +37,13 @@ const Portfolio = () => {
 			img: projFour
 		},
 		{
-			name: "Employee Tracker",
+			name: "Employee Tracker (backend app)",
 			link: "https://github.com/jsp220/Employee-Tracker",
 			repo: "https://github.com/jsp220/Employee-Tracker",
 			img: projFive
 		},
 		{
-			name: "Team Profile Generator",
+			name: "Team Profile Generator (backend app)",
 			link: "https://github.com/jsp220/Team-Profile-Generator",
 			repo: "https://github.com/jsp220/Team-Profile-Generator",
 			img: projSix
