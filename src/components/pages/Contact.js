@@ -12,16 +12,17 @@ export default function Contact() {
 		// Getting the value and name of the input which triggered the change
 		const { name, value } = e.target;
 
-		if (name == "name") return setName(value);
-		if (name == "email") return setEmail(value);
-		if (name == "message") return setMessage(value);
+		if (name === "name") return setName(value);
+		if (name === "email") return setEmail(value);
+		if (name === "message") return setMessage(value);
 	};
 
 	// show alerts when fields are left blank or email is not valid, and the user clicks away from the field
 	const handleBlur = (e) => {
 		const { name, value } = e.target;
-		if (name == "email") {
-			if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+		if (name === "email") {
+			// if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+			if (!email.toLowerCase().match(/^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/)) {
 				alert("Please enter a valid email address.");
 				return;
 			}
@@ -35,7 +36,8 @@ export default function Contact() {
 	// when the form is submitted, check for empty fields and invalid email address
 	const handleFormSubmit = (event) => {
 		event.preventDefault();
-		if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+		// if (!email.toLowerCase().match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)) {
+		if (!email.toLowerCase().match(/^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/)) {
 			alert("Please enter a valid email address.");
 			return;
 		}
