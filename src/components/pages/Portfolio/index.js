@@ -50,14 +50,21 @@ const Portfolio = () => {
 		},
 	]
 	
-	return (
-		<div className="row portfolio justify-content-around">
-			{projects.map((item) => {
-				return <Project {...item} />
-			})}
-		</div>	
-
-	);
+	// return (
+	// 	<div className="row portfolio justify-content-around">
+	// 		{projects.map((item) => {
+	// 			return <Project {...item} />
+	// 		})}
+	// 	</div>	
+	// );
+  return (
+		<div className="pt-1">
+			<h1 className="pb-1">Portfolio</h1>
+			<p>
+				This page is currently under construction...
+			</p>
+		</div>
+  )
 }
 
 export default Portfolio;
